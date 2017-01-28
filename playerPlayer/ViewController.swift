@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var totalTime: UILabel!
     
+    @IBOutlet weak var slider: UISlider!
+    
     var audioPlayer = AVAudioPlayer()
     
     let audioTracks = ["guitar1", "guitar2", "guitar3", "guitar4", "guitar5", "guitar6", "guitar7"]

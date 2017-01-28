@@ -90,6 +90,7 @@
                     <connections>
                         <outlet property="oneSpeedTwoSpeedButton" destination="e9W-Y8-JCd" id="zpV-WL-Dn1"/>
                         <outlet property="playPauseButton" destination="rmj-tH-kzr" id="UiP-wy-ie0"/>
+                        <outlet property="slider" destination="ozk-dD-R2a" id="2lg-fz-GRE"/>
                         <outlet property="timeElapsed" destination="vH9-lZ-em3" id="0Ky-hO-Iy3"/>
                         <outlet property="totalTime" destination="osR-Pi-DaV" id="tRm-hx-egb"/>
                     </connections>
