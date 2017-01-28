@@ -12,6 +12,9 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var playPauseButton: UIButton!
+    
+    @IBOutlet weak var oneSpeedTwoSpeedButton: UIButton!
+    
     var audioPlayer = AVAudioPlayer()
     
     let audioTracks = ["guitar1", "guitar2", "guitar3", "guitar4", "guitar5", "guitar6", "guitar7"]
@@ -41,6 +44,8 @@ class ViewController: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: randomTrack, ofType: "mp3")!))
             
             audioPlayer.prepareToPlay()
+            
+            audioPlayer.enableRate = true
             
         } catch {
             
@@ -135,6 +140,24 @@ class ViewController: UIViewController {
             playPauseButton.setImage(UIImage(named: "pause.png"), for: UIControlState.normal)
         }
     }
+    
+    @IBAction func oneSpeedTwoSpeed(_ sender: Any) {
+        
+        if (audioPlayer.rate == 1.0) {
+            
+            audioPlayer.rate = 2.0
+            
+            oneSpeedTwoSpeedButton.setImage(UIImage(named: "2x.png"), for: UIControlState.normal)
+            
+        } else {
+            
+            audioPlayer.rate = 1.0
+            
+            oneSpeedTwoSpeedButton.setImage(UIImage(named: "1x.png"), for: UIControlState.normal)
+        }
+        
+    }
+    
 }
 
 // create an audio player

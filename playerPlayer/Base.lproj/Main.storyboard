@@ -50,10 +50,19 @@
                                     <action selector="playPauseB:" destination="BYZ-38-t0r" eventType="touchDown" id="vFR-vR-2jm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9W-Y8-JCd">
+                                <rect key="frame" x="253" y="458" width="106" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Speed" image="1x.png"/>
+                                <connections>
+                                    <action selector="oneSpeedTwoSpeed:" destination="BYZ-38-t0r" eventType="touchDown" id="4S1-K8-R14"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="oneSpeedTwoSpeedButton" destination="e9W-Y8-JCd" id="zpV-WL-Dn1"/>
                         <outlet property="playPauseButton" destination="rmj-tH-kzr" id="UiP-wy-ie0"/>
                     </connections>
                 </viewController>
@@ -63,6 +72,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1x.png" width="100" height="100"/>
         <image name="play.png" width="100" height="100"/>
         <image name="what.png" width="480" height="383"/>
     </resources>
