@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import iOSAudioPlayer
 
 class ViewController: UIViewController {
     
