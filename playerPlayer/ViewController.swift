@@ -48,14 +48,37 @@ class ViewController: UIViewController {
     }
     
     func playAudio() {
+        
         audioPlayer.play()
     }
     
     func stopAudio() {
+        
         audioPlayer.stop()
     }
     
+    func nextAudio() {
+        
+        stopAudio()
+        
+        let randomTrack = getRandomTrack(tracks: audioTracks)
+        
+        do {
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: randomTrack, ofType: "mp3")!))
+            
+            audioPlayer.prepareToPlay()
+            
+        } catch {
+            
+            print(error)
+        }
+        
+        playAudio()
+    }
+    
     func rewindAudio() {
+        
         audioPlayer.play()
     }
 
@@ -70,6 +93,12 @@ class ViewController: UIViewController {
 
     @IBAction func rewind(_ sender: Any) {
     }
+    
+    @IBAction func next(_ sender: Any) {
+        
+        nextAudio()
+    }
+    
 }
 
 // create an audio player
