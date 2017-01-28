@@ -104,26 +104,6 @@ class ViewController: UIViewController {
         
         audioPlayer.play()
     }
-
-    @IBAction func play(_ sender: Any) {
-        
-        playAudio()
-    }
-    
-    @IBAction func stop(_ sender: Any) {
-        
-        stopAudio()
-    }
-
-    @IBAction func rewind(_ sender: Any) {
-        
-        rewindAudio()
-    }
-    
-    @IBAction func next(_ sender: Any) {
-        
-        nextAudio()
-    }
     
     @IBAction func playPauseB(_ sender: Any) {
         
@@ -158,6 +138,10 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func rewindBy20Seconds(_ sender: Any) {
+        
+        rewindAudio()
+    }
 }
 
 // create an audio player
