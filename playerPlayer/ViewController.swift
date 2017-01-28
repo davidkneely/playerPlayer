@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var oneSpeedTwoSpeedButton: UIButton!
     
+    @IBOutlet weak var timeElapsed: UILabel!
+    
+    @IBOutlet weak var totalTime: UILabel!
+    
     var audioPlayer = AVAudioPlayer()
     
     let audioTracks = ["guitar1", "guitar2", "guitar3", "guitar4", "guitar5", "guitar6", "guitar7"]
@@ -53,36 +57,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func playAudio() {
-        
-        audioPlayer.play()
-    }
-    
-    func stopAudio() {
-        
-        audioPlayer.stop()
-    }
-    
-    func nextAudio() {
-        
-        stopAudio()
-        
-        let randomTrack = getRandomTrack(tracks: audioTracks)
-        
-        do {
-            
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: randomTrack, ofType: "mp3")!))
-            
-            audioPlayer.prepareToPlay()
-            
-        } catch {
-            
-            print(error)
-        }
-        
-        playAudio()
-    }
-    
     func rewindAudio() {
         
         print("currentTime: " + "\(audioPlayer.currentTime)")
@@ -119,6 +93,10 @@ class ViewController: UIViewController {
             
             playPauseButton.setImage(UIImage(named: "pause.png"), for: UIControlState.normal)
         }
+        
+        totalTime.text = "\(audioPlayer.duration)"
+        
+        timeElapsed.text = "\(audioPlayer.currentTime)"
     }
     
     @IBAction func oneSpeedTwoSpeed(_ sender: Any) {
