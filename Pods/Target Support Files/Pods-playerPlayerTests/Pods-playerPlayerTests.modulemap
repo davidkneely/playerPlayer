@@ -1,0 +1,6 @@
+framework module Pods_playerPlayerTests {
+  umbrella header "Pods-playerPlayerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
