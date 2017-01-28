@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var playPauseButton: UIButton!
     var audioPlayer = AVAudioPlayer()
     
     let audioTracks = ["guitar1", "guitar2", "guitar3", "guitar4", "guitar5", "guitar6", "guitar7"]
@@ -79,6 +80,23 @@ class ViewController: UIViewController {
     
     func rewindAudio() {
         
+        print("currentTime: " + "\(audioPlayer.currentTime)")
+        
+        var currentPosition = audioPlayer.currentTime
+        
+        if(currentPosition < 20) {
+            
+            currentPosition = 0
+            
+        } else {
+            
+            currentPosition = currentPosition - 20
+        }
+        
+        audioPlayer.currentTime = currentPosition
+        
+        print("currentTime: " + "\(audioPlayer.currentTime)")
+        
         audioPlayer.play()
     }
 
@@ -86,12 +104,15 @@ class ViewController: UIViewController {
         
         playAudio()
     }
+    
     @IBAction func stop(_ sender: Any) {
         
         stopAudio()
     }
 
     @IBAction func rewind(_ sender: Any) {
+        
+        rewindAudio()
     }
     
     @IBAction func next(_ sender: Any) {
@@ -99,6 +120,21 @@ class ViewController: UIViewController {
         nextAudio()
     }
     
+    @IBAction func playPauseB(_ sender: Any) {
+        
+        if (audioPlayer.isPlaying == true) {
+            
+            audioPlayer.stop()
+            
+            playPauseButton.setImage(UIImage(named: "play.png"), for: UIControlState.normal)
+            
+        } else {
+            
+            audioPlayer.play()
+            
+            playPauseButton.setImage(UIImage(named: "pause.png"), for: UIControlState.normal)
+        }
+    }
 }
 
 // create an audio player

@@ -23,6 +23,8 @@
 		50E5A98B1E3D273600EE8162 /* guitar5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9841E3D273600EE8162 /* guitar5.mp3 */; };
 		50E5A98C1E3D273600EE8162 /* guitar6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9851E3D273600EE8162 /* guitar6.mp3 */; };
 		50E5A98D1E3D273600EE8162 /* guitar7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9861E3D273600EE8162 /* guitar7.mp3 */; };
+		50E5A9981E3D3B7400EE8162 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9961E3D3B7400EE8162 /* pause.png */; };
+		50E5A9991E3D3B7400EE8162 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9971E3D3B7400EE8162 /* play.png */; };
 		D39B8B1EECF46DCE2BA393BD /* Pods_playerPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE05716FC69082A9F6CFF159 /* Pods_playerPlayerTests.framework */; };
 		E1A43C47FC09853DE1BA2B2B /* Pods_playerPlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FE8958B07379A299A21674 /* Pods_playerPlayerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		50E5A9841E3D273600EE8162 /* guitar5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = guitar5.mp3; sourceTree = "<group>"; };
 		50E5A9851E3D273600EE8162 /* guitar6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = guitar6.mp3; sourceTree = "<group>"; };
 		50E5A9861E3D273600EE8162 /* guitar7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = guitar7.mp3; sourceTree = "<group>"; };
+		50E5A9961E3D3B7400EE8162 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		50E5A9971E3D3B7400EE8162 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		5398BC75511FBA8C2D7013CA /* Pods-playerPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playerPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playerPlayerTests/Pods-playerPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80733555E66D4C8302E2759D /* Pods-playerPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playerPlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-playerPlayerTests/Pods-playerPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A197F04358C4808DBDFCBAC7 /* Pods-playerPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playerPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playerPlayerUITests/Pods-playerPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,12 +172,14 @@
 			children = (
 				50E5A97E1E3D236F00EE8162 /* what.png */,
 				50E5A9501E3D216300EE8162 /* AppDelegate.swift */,
-				50E5A98E1E3D273D00EE8162 /* mp3 */,
+				50E5A9961E3D3B7400EE8162 /* pause.png */,
+				50E5A9971E3D3B7400EE8162 /* play.png */,
 				50E5A9521E3D216300EE8162 /* ViewController.swift */,
 				50E5A9541E3D216300EE8162 /* Main.storyboard */,
 				50E5A9571E3D216300EE8162 /* Assets.xcassets */,
 				50E5A9591E3D216300EE8162 /* LaunchScreen.storyboard */,
 				50E5A95C1E3D216300EE8162 /* Info.plist */,
+				50E5A98E1E3D273D00EE8162 /* mp3 */,
 			);
 			path = playerPlayer;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			files = (
 				50E5A95B1E3D216300EE8162 /* LaunchScreen.storyboard in Resources */,
 				50E5A98B1E3D273600EE8162 /* guitar5.mp3 in Resources */,
+				50E5A9981E3D3B7400EE8162 /* pause.png in Resources */,
 				50E5A98A1E3D273600EE8162 /* guitar4.mp3 in Resources */,
 				50E5A98C1E3D273600EE8162 /* guitar6.mp3 in Resources */,
 				50E5A9881E3D273600EE8162 /* guitar2.mp3 in Resources */,
@@ -340,6 +347,7 @@
 				50E5A9561E3D216300EE8162 /* Main.storyboard in Resources */,
 				50E5A9891E3D273600EE8162 /* guitar3.mp3 in Resources */,
 				50E5A9871E3D273600EE8162 /* guitar1.mp3 in Resources */,
+				50E5A9991E3D3B7400EE8162 /* play.png in Resources */,
 				50E5A97F1E3D236F00EE8162 /* what.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
