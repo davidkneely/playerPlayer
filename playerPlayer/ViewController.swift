@@ -58,6 +58,10 @@ class ViewController: UIViewController {
         
         slider.value = Float(audioPlayer.currentTime)
         
+                totalTime.text = "\(Int(audioPlayer.duration)))"
+        
+                timeElapsed.text = "\(Int(audioPlayer.currentTime)))"
+        
 //        totalTime.text = "\(getTimeFrom(float: Float(audioPlayer.duration)))"
 //        
 //        timeElapsed.text = "\(getTimeFrom(float: Float(audioPlayer.currentTime)))"
