@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var playPauseButton: UIButton!
     
@@ -24,6 +25,27 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer = AVAudioPlayer()
     
     let audioTracks = ["guitar1", "guitar2", "guitar3", "guitar4", "guitar5", "guitar6", "guitar7"]
+    
+    let chapterImages = ["branches.png",
+                         "bust.png",
+                         "peace.png"]
+    
+    func getRandomImageStringFrom(images: [String]) -> String {
+        
+        let randomIndex = arc4random_uniform(UInt32(images.count))
+        
+        let returnString = images[Int(randomIndex)]
+        
+        return returnString
+    }
+    
+    func changeImage() {
+        
+        imageView.image = UIImage.init(named: getRandomImageStringFrom(images: chapterImages))
+        
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        
+    }
     
     func audioPlayerDidFinishPlaying(_: AVAudioPlayer, successfully: Bool) {
         
@@ -47,6 +69,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         initAudioPlayer()
         
         initSlider()
+        
+        changeImage()
     }
     
     func getRandomTrackFrom(tracks: [String]) -> String {
@@ -67,6 +91,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         slider.maximumTrackTintColor = UIColor.cyan
         
         slider.minimumTrackTintColor = UIColor.black
+    }
+    
+    func initChapterMarkersAndImages() {
+        
+        // creates array of images
     }
     
     func updateLabelsAndSlider() {
