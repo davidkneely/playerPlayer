@@ -185,22 +185,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4A-7T-TFc">
-                                <rect key="frame" x="50" y="104" width="275" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4A-7T-TFc">
+                                <rect key="frame" x="26" y="104" width="343" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="NEi-OC-I79"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la0-iM-i3a">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NpI-0N-3zK"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.15204345655594764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="x4A-7T-TFc" firstAttribute="top" secondItem="ge7-o5-oS6" secondAttribute="bottom" constant="40" id="92g-34-Qrq"/>
                             <constraint firstItem="ge7-o5-oS6" firstAttribute="top" secondItem="QrO-xg-rVK" secondAttribute="bottom" id="B2o-QA-Adf"/>
+                            <constraint firstItem="x4A-7T-TFc" firstAttribute="trailing" secondItem="3GT-0i-DNl" secondAttribute="trailingMargin" constant="10" id="TZc-zc-ORZ"/>
+                            <constraint firstAttribute="trailing" secondItem="la0-iM-i3a" secondAttribute="trailing" id="Vlq-mn-bSb"/>
+                            <constraint firstItem="x4A-7T-TFc" firstAttribute="leading" secondItem="3GT-0i-DNl" secondAttribute="leadingMargin" constant="10" id="dqf-cn-lap"/>
+                            <constraint firstItem="0dF-Im-K7W" firstAttribute="top" secondItem="la0-iM-i3a" secondAttribute="bottom" id="iRr-Io-6NE"/>
                             <constraint firstAttribute="trailing" secondItem="ge7-o5-oS6" secondAttribute="trailing" id="is7-lJ-oYU"/>
+                            <constraint firstItem="la0-iM-i3a" firstAttribute="leading" secondItem="3GT-0i-DNl" secondAttribute="leading" id="ls9-pl-jzI"/>
                             <constraint firstItem="ge7-o5-oS6" firstAttribute="leading" secondItem="3GT-0i-DNl" secondAttribute="leading" id="nYb-95-4DE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="miniPlayer" destination="la0-iM-i3a" id="H1r-3u-0ia"/>
                         <outlet property="textLabel" destination="x4A-7T-TFc" id="uTK-mS-wD8"/>
                     </connections>
                 </viewController>
