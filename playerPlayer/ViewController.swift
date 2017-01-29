@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var playPauseButton: UIButton!
     
@@ -24,6 +24,21 @@ class ViewController: UIViewController {
     var audioPlayer = AVAudioPlayer()
     
     let audioTracks = ["guitar1", "guitar2", "guitar3", "guitar4", "guitar5", "guitar6", "guitar7"]
+    
+    func audioPlayerDidFinishPlaying(_: AVAudioPlayer, successfully: Bool) {
+        
+        audioPlayer.stop()
+        
+        playPauseButton.setImage(UIImage(named: "play.png"), for: UIControlState.normal)
+        
+        updateLabelsAndSlider()
+        
+        
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        
+    }
     
     override func viewDidLoad() {
         
@@ -54,17 +69,22 @@ class ViewController: UIViewController {
         slider.minimumTrackTintColor = UIColor.black
     }
     
-    func updateTime(_ timer: Timer) {
+    func updateLabelsAndSlider() {
         
         slider.value = Float(audioPlayer.currentTime)
         
-                totalTime.text = "\(Int(audioPlayer.duration)):00"
+        totalTime.text = "\(Int(audioPlayer.duration)):00"
         
-                timeElapsed.text = "\(Int(audioPlayer.currentTime)):00"
+        timeElapsed.text = "\(Int(audioPlayer.currentTime)):00"
         
-//        totalTime.text = "\(getTimeFrom(float: Float(audioPlayer.duration)))"
-//        
-//        timeElapsed.text = "\(getTimeFrom(float: Float(audioPlayer.currentTime)))"
+        //        totalTime.text = "\(getTimeFrom(float: Float(audioPlayer.duration)))"
+        //
+        //        timeElapsed.text = "\(getTimeFrom(float: Float(audioPlayer.currentTime)))"
+    }
+    
+    func updateTime(_ timer: Timer) {
+        
+        updateLabelsAndSlider()
     }
     
     func initAudioPlayer() {
@@ -78,6 +98,8 @@ class ViewController: UIViewController {
             audioPlayer.prepareToPlay()
             
             audioPlayer.enableRate = true
+            
+            audioPlayer.delegate = self
             
             slider.maximumValue = Float(audioPlayer.duration)
             
