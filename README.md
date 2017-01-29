@@ -14,6 +14,10 @@ DONE:
 Building an audio player. 
 Shows on a screen.
 
+MAKE SURE:
+
+You open the xcworkspace file instead of xcodeproj file. This has cocoapods installed.
+
 HELP:
 
 Check out the "Issues" tab above if you want to help out with this project.
