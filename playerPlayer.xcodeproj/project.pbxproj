@@ -32,6 +32,7 @@
 		50E5A9A61E3D751300EE8162 /* branches.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9A31E3D751300EE8162 /* branches.png */; };
 		50E5A9A71E3D751300EE8162 /* bust.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9A41E3D751300EE8162 /* bust.png */; };
 		50E5A9A81E3D751300EE8162 /* peace.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E5A9A51E3D751300EE8162 /* peace.png */; };
+		50E5A9AA1E3D7B9C00EE8162 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5A9A91E3D7B9C00EE8162 /* BrowserViewController.swift */; };
 		D39B8B1EECF46DCE2BA393BD /* Pods_playerPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE05716FC69082A9F6CFF159 /* Pods_playerPlayerTests.framework */; };
 		E1A43C47FC09853DE1BA2B2B /* Pods_playerPlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FE8958B07379A299A21674 /* Pods_playerPlayerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		50E5A9A31E3D751300EE8162 /* branches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = branches.png; sourceTree = "<group>"; };
 		50E5A9A41E3D751300EE8162 /* bust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bust.png; sourceTree = "<group>"; };
 		50E5A9A51E3D751300EE8162 /* peace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peace.png; sourceTree = "<group>"; };
+		50E5A9A91E3D7B9C00EE8162 /* BrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		5398BC75511FBA8C2D7013CA /* Pods-playerPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playerPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playerPlayerTests/Pods-playerPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80733555E66D4C8302E2759D /* Pods-playerPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playerPlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-playerPlayerTests/Pods-playerPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		A197F04358C4808DBDFCBAC7 /* Pods-playerPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playerPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playerPlayerUITests/Pods-playerPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				50E5A9501E3D216300EE8162 /* AppDelegate.swift */,
 				50E5A9521E3D216300EE8162 /* ViewController.swift */,
+				50E5A9A91E3D7B9C00EE8162 /* BrowserViewController.swift */,
 				50E5A9541E3D216300EE8162 /* Main.storyboard */,
 				50E5A9571E3D216300EE8162 /* Assets.xcassets */,
 				50E5A9591E3D216300EE8162 /* LaunchScreen.storyboard */,
@@ -548,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E5A9531E3D216300EE8162 /* ViewController.swift in Sources */,
+				50E5A9AA1E3D7B9C00EE8162 /* BrowserViewController.swift in Sources */,
 				50E5A9511E3D216300EE8162 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

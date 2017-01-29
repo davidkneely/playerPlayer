@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var playPauseButton: UIButton!
@@ -30,6 +31,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                          "bust.png",
                          "peace.png",
                          "what.png"]
+    
+    
     
     func getRandomImageStringFrom(images: [String]) -> String {
         
@@ -217,5 +220,14 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func sliderValueChanged(_ sender: Any) {
         
         audioPlayer.currentTime = TimeInterval(slider.value)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destViewController: BrowserViewController = segue.destination as! BrowserViewController
+        
+          destViewController.labelText = "Hello World"
+        
+//        destViewController.textLabel.text = "Hello World!"
     }
 }
