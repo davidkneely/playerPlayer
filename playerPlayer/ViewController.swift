@@ -34,9 +34,6 @@ class ViewController: UIViewController {
         initSlider()
     }
     
-    
-    
-    
     func getRandomTrackFrom(tracks: [String]) -> String {
         
         let randomIndex = arc4random_uniform(UInt32(tracks.count))
@@ -61,9 +58,9 @@ class ViewController: UIViewController {
         
         slider.value = Float(audioPlayer.currentTime)
         
-        totalTime.text = "\(audioPlayer.duration)"
-        
-        timeElapsed.text = "\(audioPlayer.currentTime)"
+//        totalTime.text = "\(getTimeFrom(float: Float(audioPlayer.duration)))"
+//        
+//        timeElapsed.text = "\(getTimeFrom(float: Float(audioPlayer.currentTime)))"
     }
     
     func initAudioPlayer() {
@@ -110,7 +107,14 @@ class ViewController: UIViewController {
         audioPlayer.play()
     }
     
-    
+    func getTimeFrom(float: Float) -> String {
+        
+        let timeInInts = Int(float)
+        
+        let timeInMinutes = timeInInts / 60
+        
+        return "\(timeInMinutes)"
+    }
     
     @IBAction func playPause(_ sender: Any) {
         
@@ -152,5 +156,10 @@ class ViewController: UIViewController {
     @IBAction func rewindBy20Seconds(_ sender: Any) {
         
         rewindAudio()
+    }
+    
+    @IBAction func sliderValueChanged(_ sender: Any) {
+        
+        audioPlayer.currentTime = TimeInterval(slider.value)
     }
 }
