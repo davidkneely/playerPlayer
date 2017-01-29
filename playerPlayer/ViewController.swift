@@ -28,7 +28,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     let chapterImages = ["branches.png",
                          "bust.png",
-                         "peace.png"]
+                         "peace.png",
+                         "what.png"]
     
     func getRandomImageStringFrom(images: [String]) -> String {
         
