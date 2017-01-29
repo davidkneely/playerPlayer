@@ -176,18 +176,13 @@
 		50E5A94F1E3D216200EE8162 /* playerPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				50E5A97E1E3D236F00EE8162 /* what.png */,
 				50E5A9501E3D216300EE8162 /* AppDelegate.swift */,
-				50E5A9961E3D3B7400EE8162 /* pause.png */,
-				50E5A99A1E3D3F3000EE8162 /* 1x.png */,
-				50E5A99E1E3D5CA100EE8162 /* rewind.png */,
-				50E5A99B1E3D3F3000EE8162 /* 2x.png */,
-				50E5A9971E3D3B7400EE8162 /* play.png */,
 				50E5A9521E3D216300EE8162 /* ViewController.swift */,
 				50E5A9541E3D216300EE8162 /* Main.storyboard */,
 				50E5A9571E3D216300EE8162 /* Assets.xcassets */,
 				50E5A9591E3D216300EE8162 /* LaunchScreen.storyboard */,
 				50E5A95C1E3D216300EE8162 /* Info.plist */,
+				50E5A9A01E3D631200EE8162 /* png */,
 				50E5A98E1E3D273D00EE8162 /* mp3 */,
 			);
 			path = playerPlayer;
@@ -223,6 +218,19 @@
 				50E5A9861E3D273600EE8162 /* guitar7.mp3 */,
 			);
 			name = mp3;
+			sourceTree = "<group>";
+		};
+		50E5A9A01E3D631200EE8162 /* png */ = {
+			isa = PBXGroup;
+			children = (
+				50E5A97E1E3D236F00EE8162 /* what.png */,
+				50E5A9961E3D3B7400EE8162 /* pause.png */,
+				50E5A99A1E3D3F3000EE8162 /* 1x.png */,
+				50E5A99E1E3D5CA100EE8162 /* rewind.png */,
+				50E5A99B1E3D3F3000EE8162 /* 2x.png */,
+				50E5A9971E3D3B7400EE8162 /* play.png */,
+			);
+			name = png;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

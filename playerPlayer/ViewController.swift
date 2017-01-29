@@ -30,9 +30,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         initAudioPlayer()
+        
+        initSlider()
     }
     
-    func getRandomTrack(tracks: [String]) -> String {
+    
+    
+    
+    func getRandomTrackFrom(tracks: [String]) -> String {
         
         let randomIndex = arc4random_uniform(UInt32(tracks.count))
         
@@ -41,9 +46,29 @@ class ViewController: UIViewController {
         return returnString
     }
     
+    func initSlider() {
+        
+        slider.tintColor = UIColor.red
+        
+        slider.thumbTintColor = UIColor.green
+        
+        slider.maximumTrackTintColor = UIColor.cyan
+        
+        slider.minimumTrackTintColor = UIColor.black
+    }
+    
+    func updateTime(_ timer: Timer) {
+        
+        slider.value = Float(audioPlayer.currentTime)
+        
+        totalTime.text = "\(audioPlayer.duration)"
+        
+        timeElapsed.text = "\(audioPlayer.currentTime)"
+    }
+    
     func initAudioPlayer() {
         
-        let randomTrack = getRandomTrack(tracks: audioTracks)
+        let randomTrack = getRandomTrackFrom(tracks: audioTracks)
         
         do {
             
@@ -53,15 +78,21 @@ class ViewController: UIViewController {
             
             audioPlayer.enableRate = true
             
+            slider.maximumValue = Float(audioPlayer.duration)
+            
+            slider.value = 0.0
+            
+            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            
         } catch {
             
             print(error)
         }
+        
+        
     }
     
     func rewindAudio() {
-        
-        print("currentTime: " + "\(audioPlayer.currentTime)")
         
         var currentPosition = audioPlayer.currentTime
         
@@ -75,13 +106,13 @@ class ViewController: UIViewController {
         }
         
         audioPlayer.currentTime = currentPosition
-        
-        print("currentTime: " + "\(audioPlayer.currentTime)")
-        
+
         audioPlayer.play()
     }
     
-    @IBAction func playPauseB(_ sender: Any) {
+    
+    
+    @IBAction func playPause(_ sender: Any) {
         
         if (audioPlayer.isPlaying == true) {
             
@@ -100,7 +131,7 @@ class ViewController: UIViewController {
         
         timeElapsed.text = "\(audioPlayer.currentTime)"
     }
-    
+
     @IBAction func oneSpeedTwoSpeed(_ sender: Any) {
         
         if (audioPlayer.rate == 1.0) {
@@ -123,31 +154,3 @@ class ViewController: UIViewController {
         rewindAudio()
     }
 }
-
-// create an audio player
-
-
-
-// allow for buttons that manipulate the audio being played
-
-// play
-
-// pause
-
-// -20 seconds
-
-// speed 1
-
-// speed 2
-
-// bar to scrub forward and backward
-
-// current time
-
-// time duration
-
-
-
-
-
-    
