@@ -31,9 +31,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                          "bust.png",
                          "peace.png",
                          "what.png"]
-    
-    
-    
+
     func getRandomImageStringFrom(images: [String]) -> String {
         
         let randomIndex = arc4random_uniform(UInt32(images.count))
