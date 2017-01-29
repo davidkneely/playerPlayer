@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.3.0)
+  - Canvas (0.1.2)
   - iOSAudioPlayer (0.1.15)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
+  - Canvas
   - iOSAudioPlayer (~> 0.1)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   iOSAudioPlayer: 84dbc7a4c623badacdf0f2e665f6398ab8fd2a74
 
-PODFILE CHECKSUM: 3aa93697282a59c893524d2703a3f5b51a092a65
+PODFILE CHECKSUM: ca6910cc628e736edcf401b432bb2aa42fc9d5b1
 
 COCOAPODS: 1.1.1
